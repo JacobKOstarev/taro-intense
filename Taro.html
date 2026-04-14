@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Таро-интенсив Анастасии Лыковой | Научись читать расклады за 3 дня</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #0B0710 0%, #14101D 100%);
+      font-family: 'Inter', sans-serif;
+      color: #F1E9FF;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    section {
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 56px;
+      background: linear-gradient(120deg, #FFFFFF, #CBB6F0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #CFC5E6;
+      margin-bottom: 48px;
+    }
+
+    .btn-register, .btn-intense {
+      background: linear-gradient(95deg, #D4AF37 0%, #B88F1A 100%);
+      border: none;
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #0B0710;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-register:hover, .btn-intense:hover {
+      transform: scale(1.02);
+      background: linear-gradient(95deg, #E4C356 0%, #C69E2C 100%);
+      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.4);
+    }
+
+    .grid-2cols {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .grid-3cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .badge-3days {
+      display: inline-flex;
+      background: rgba(212, 175, 55, 0.18);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      padding: 6px 18px;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #FFE6A3;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #FFFFFF 0%, #E5D5FF 80%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero-sub {
+      font-size: 1.35rem;
+      color: #CFC5E6;
+      margin-bottom: 28px;
+      border-left: 3px solid #D4AF37;
+      padding-left: 20px;
+    }
+    .free-block {
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(8px);
+      border-radius: 48px;
+      padding: 10px 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+    }
+    .free-label {
+      font-weight: 800;
+      font-size: 1.2rem;
+      background: linear-gradient(120deg, #F5E6A3, #D4AF37);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .arrow-down {
+      animation: bounce 1.8s infinite ease;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+    .photo-frame {
+      width: 380px;
+      height: 480px;
+      background: radial-gradient(circle at 30% 20%, rgba(212, 175, 55, 0.25), rgba(15, 10, 30, 0.7));
+      border-radius: 280px 280px 180px 180px;
+      overflow: hidden;
+      box-shadow: 0 30px 40px rgba(0,0,0,0.5);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .photo-placeholder .name {
+      font-size: 1.8rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #F9E0A0, #D4AF37);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .problem-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(25, 20, 40, 0.6);
+      backdrop-filter: blur(4px);
+      border-radius: 24px;
+      padding: 20px 24px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: 0.25s;
+    }
+    .problem-item:hover {
+      border-color: rgba(212, 175, 55, 0.6);
+      transform: translateY(-3px);
+    }
+    .problem-icon {
+      font-size: 2.2rem;
+      min-width: 52px;
+    }
+
+    .warning-block {
+      background: rgba(212, 175, 55, 0.1);
+      border-left: 4px solid #D4AF37;
+      padding: 20px 28px;
+      border-radius: 20px;
+      margin: 30px 0;
+    }
+
+    .day-card {
+      background: rgba(20, 15, 35, 0.7);
+      backdrop-filter: blur(4px);
+      border-radius: 32px;
+      padding: 28px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      height: 100%;
+    }
+    .day-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #D4AF37;
+      margin-bottom: 12px;
+    }
+    .day-date {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    .day-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .day-list li {
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+    }
+    .day-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #D4AF37;
+    }
+
+    .bonus-card {
+      background: linear-gradient(145deg, #1E1830, #151021);
+      border-radius: 28px;
+      padding: 28px 20px;
+      text-align: center;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      transition: 0.3s;
+    }
+    .bonus-icon {
+      font-size: 4rem;
+      margin-bottom: 16px;
+    }
+    .bonus-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #F5E6A3;
+    }
+
+    .result-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(212, 175, 55, 0.08);
+      border-radius: 20px;
+      padding: 18px 24px;
+      margin-bottom: 16px;
+    }
+    .result-check {
+      font-size: 1.8rem;
+    }
+
+    .author-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .author-photo {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .author-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+    .author-list li {
+      margin-bottom: 16px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .author-list li::before {
+      content: "★";
+      position: absolute;
+      left: 0;
+      color: #D4AF37;
+    }
+
+    .final-cta {
+      text-align: center;
+      background: rgba(212, 175, 55, 0.05);
+      border-radius: 48px;
+      padding: 48px 32px;
+    }
+    .date-badge {
+      background: #D4AF37;
+      color: #0B0710;
+      display: inline-block;
+      padding: 8px 24px;
+      border-radius: 60px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .features-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 32px 0;
+    }
+    .features-list span {
+      background: rgba(255,255,255,0.05);
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1000px) {
+      .hero-grid, .grid-2cols, .grid-3cols, .author-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .hero-content {
+        text-align: center;
+      }
+      .hero-sub {
+        border-left: none;
+        padding-left: 0;
+      }
+      .free-block {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .button-wrapper {
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.6rem;
+      }
+      .section-title {
+        font-size: 2.2rem;
+      }
+      .photo-frame {
+        width: 280px;
+        height: 360px;
+      }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 20px;
+      }
+      section {
+        padding: 60px 0;
+      }
+      .btn-register {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
+    }
+    footer {
+      text-align: center;
+      padding: 32px;
+      opacity: 0.6;
+      font-size: 0.8rem;
+    }
+
+    /* АНИМАЦИИ ПОЯВЛЕНИЯ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1.1), transform 0.8s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    }
+    .fade-up.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-left.appear {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .fade-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-right.appear {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.4, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.4, 1);
+    }
+    .scale-in.appear {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-right">
+          <div class="badge-3days">✨ ЗА 3 ДНЯ ✨</div>
+          <h1>Научись читать<br>расклады</h1>
+          <div class="hero-sub">Трехдневный Таро-интенсив<br>с Анастасией Лыковой</div>
+          <div class="free-block">
+            <div class="arrow-down">👇</div>
+            <div>
+              <div class="free-label">Участие бесплатное!</div>
+              <div class="free-small">Занимайте место — количество ограничено</div>
+            </div>
+          </div>
+          <button class="btn-register" onclick="alert('✅ Вы зарегистрированы на интенсив! Ссылка на Telegram-канал придёт на почту.')">Зарегистрироваться</button>
+        </div>
+        <div class="hero-photo fade-left">
+          <div class="photo-frame">
+            <div class="photo-placeholder">
+              <div style="font-size: 3rem;">✦ ✦ ✦</div>
+              <div class="name">Анастасия<br>Лыкова</div>
+              <div style="margin-top: 12px;">🔮 Основатель Академии Таро</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-up">✨ Для кого этот интенсив ✨</h2>
+      <div class="grid-2cols">
+        <div class="problem-item fade-up delay-100"><div class="problem-icon">💔</div><div>Вас тянет и зовет Таро, и вы хотите изучить этот инструмент</div></div>
+        <div class="problem-item fade-up delay-200"><div class="problem-icon">📚❓</div><div>Вы пробовали изучать Таро самостоятельно, но еще больше запутались</div></div>
+        <div class="problem-item fade-up delay-100"><div class="problem-icon">🌐😵</div><div>Устали от противоречивой информации в книгах и интернете</div></div>
+        <div class="problem-item fade-up delay-200"><div class="problem-icon">🃟🌀</div><div>Путаетесь в значениях карт и не уверены в своих трактовках</div></div>
+        <div class="problem-item fade-up delay-100"><div class="problem-icon">🔀🤔</div><div>Понимаете карты по отдельности, но не знаете, как их сочетать</div></div>
+        <div class="problem-item fade-up delay-200"><div class="problem-icon">📖⚡</div><div>Вы боитесь ошибиться в раскладах и цепляетесь за «книжные» трактовки</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-up">🌟 Как проходит интенсив</h2>
+      <div class="grid-2cols" style="margin-bottom: 30px;">
+        <div class="fade-right">
+          <p style="font-size: 1.2rem;">После регистрации вы получаете доступ в закрытый Telegram-канал, где вас ждет подарок за регистрацию и полезные материалы по чтению карт Таро.</p>
+          <p style="margin-top: 20px;">📌 У нас впереди <strong>3 урока</strong>, которые изменят ваше понимание карт и ваши расклады 🔥</p>
+        </div>
+        <div class="warning-block fade-left">
+          <p><strong>🔥 ВАЖНО! Быть онлайн все 3 дня до самого конца.</strong></p>
+          <p>❌ Записей уроков НЕ БУДЕТ<br>
+          🔮 Я поделюсь с вами наработками из личной практики<br>
+          🔝 И авторскими фишками по чтению раскладов</p>
+          <p>🎁 Все, кто смотрит уроки до конца — получают эксклюзивные бонусы!</p>
+        </div>
+      </div>
+      <div class="scale-in" style="background: rgba(212,175,55,0.08); border-radius: 28px; padding: 28px; text-align: center; margin-bottom: 32px;">
+        <p style="font-size: 1.1rem;"><strong>Никакой воды!</strong> Это те знания, которые вы НЕ НАЙДЕТЕ в открытых источниках. Более того, зачастую их не дают даже на платных обучениях.</p>
+      </div>
+      <div style="text-align: center;">
+        <button class="btn-intense scale-in" onclick="alert('🔥 Вы выбрали интенсив! Регистрация активирована.')">Хочу на интенсив</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-up">📅 Программа интенсива</h2>
+      <div class="grid-3cols">
+        <div class="day-card scale-in delay-100">
+          <div class="day-title">День 1</div>
+          <div class="day-date">🗓 14 октября, 19:00 Мск</div>
+          <p style="font-weight: 600; margin-bottom: 12px;">Тайные символы на картах, которые вы не замечаете</p>
+          <ul class="day-list">
+            <li>Что делать, когда карты «молчат»?</li>
+            <li>Алгоритм: на что обращать внимание?</li>
+            <li>Детали на картах, которые многие упускают</li>
+            <li>Сюжеты и символизм карт</li>
+            <li>Как связаны карты между собой?</li>
+            <li>Разбор пути героя и жизненных этапов по Таро</li>
+          </ul>
+        </div>
+        <div class="day-card scale-in delay-200">
+          <div class="day-title">День 2</div>
+          <div class="day-date">🗓 15 октября, 19:00 Мск</div>
+          <p style="font-weight: 600; margin-bottom: 12px;">Секреты точных раскладов. Инструкция и нюансы</p>
+          <ul class="day-list">
+            <li>Как читать расклады легко и уверенно?</li>
+            <li>Как связывать карты в единую историю?</li>
+            <li>Как получать максимум информации из любого расклада?</li>
+            <li>Личные наработки из практики</li>
+          </ul>
+        </div>
+        <div class="day-card scale-in delay-300">
+          <div class="day-title">День 3</div>
+          <div class="day-date">🗓 16 октября, 19:00 Мск</div>
+          <p style="font-weight: 600; margin-bottom: 12px;">Главные ошибки 90% тарологов</p>
+          <ul class="day-list">
+            <li>Что мешает делать точные расклады?</li>
+            <li>Как грамотно работать с Таро?</li>
+            <li>Ключевые ошибки большинства</li>
+            <li>Лайфхаки для расклада на себя, когда вы эмоционально вовлечены</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 48px;">
+        <button class="btn-register scale-in" onclick="alert('✅ Место на интенсиве забронировано! Ждём вас 14 октября.')">Занять место на интенсиве</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-up">🎁 Эксклюзивные бонусы</h2>
+      <p class="section-sub fade-up delay-100">Для всех, кто будет смотреть уроки до конца</p>
+      <div class="grid-3cols">
+        <div class="bonus-card fade-up delay-100">
+          <div class="bonus-icon">📘✨</div>
+          <div class="bonus-title">«Путь героя по Старшим арканам»</div>
+          <p>Бонусный файл с глубоким разбором</p>
+        </div>
+        <div class="bonus-card fade-up delay-200">
+          <div class="bonus-icon">🔮📖</div>
+          <div class="bonus-title">«7 триплетов из моей практики»</div>
+          <p>С подробным разбором каждого триплета</p>
+        </div>
+        <div class="bonus-card fade-up delay-300">
+          <div class="bonus-icon">🃟📚</div>
+          <div class="bonus-title">Методичка «Значения всех 78 карт Таро»</div>
+          <p>Полный справочник под рукой</p>
+        </div>
+      </div>
+      <p class="fade-up" style="text-align: center; margin-top: 24px; font-style: italic;">✨ Каждый бонус — с авторской обложкой и примерами ✨</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="scale-in" style="background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(0,0,0,0.4)); border-radius: 48px; padding: 48px 32px; text-align: center;">
+        <div style="font-size: 4rem;">🎁🎲🎁</div>
+        <h2 class="section-title" style="margin-bottom: 20px;">РОЗЫГРЫШ ДЛЯ УЧАСТНИКОВ</h2>
+        <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto;">Среди всех, кто досмотрит мастер-класс до конца, мы разыграем <strong>10 колод Таро</strong> <span style="color:#D4AF37;">(название колоды согласовывается)</span>!</p>
+        <div style="margin-top: 40px;">
+          <button class="btn-register" onclick="alert('🎉 Участие в розыгрыше автоматическое при просмотре всех уроков. Регистрация подтверждена!')">Зарегистрироваться</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title fade-up">⭐ Ваши результаты после интенсива</h2>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="result-item fade-up delay-100"><div class="result-check">✅</div> Поймете, как работать с картами Таро грамотно и уверенно</div>
+        <div class="result-item fade-up delay-200"><div class="result-check">✅</div> Сможете по-настоящему понять и прочувствовать карты, что избавит вас от необходимости их зубрить</div>
+        <div class="result-item fade-up delay-100"><div class="result-check">✅</div> Научитесь видеть целостную картину расклада, понимать глубокие взаимосвязи</div>
+        <div class="result-item fade-up delay-200"><div class="result-check">✅</div> Избавитесь от страха «сделать что-то не так» и начнёте доверять своей интуиции</div>
+        <div class="result-item fade-up delay-100"><div class="result-check">✅</div> Поймете, как трактовать расклады чётко и осознанно, даже если карты кажутся запутанными</div>
+      </div>
+      <div style="text-align: center; margin-top: 48px;">
+        <button class="btn-intense scale-in" onclick="alert('🚀 Вы на пути к мастерству! Регистрация на интенсив оформлена.')">Хочу на интенсив! 🚀</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="author-grid">
+        <div class="author-photo fade-right">
+          <div class="photo-frame" style="width: 100%; height: auto; aspect-ratio: 1/1.2; border-radius: 40px;">
+            <div class="photo-placeholder" style="padding: 20px;">
+              <div style="font-size: 3rem;">🌟</div>
+              <div class="name">Анастасия Лыкова</div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-left">
+          <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Автор интенсива</h2>
+          <ul class="author-list">
+            <li>Руководитель Академии Таро с государственной аккредитацией</li>
+            <li>Премия GetCourse «Лучшая онлайн-школа в эзотерике»</li>
+            <li>Лицензия Министерства образования</li>
+            <li>Более 6000 учеников по всему миру</li>
+            <li>Приглашенный спикер в сети книжных магазинов «Читай-город»</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="final-cta scale-in">
+        <div class="date-badge">📅 14–16 октября в 19:00 Мск</div>
+        <h2 style="font-family: 'Playfair Display'; font-size: 2.2rem; margin-bottom: 16px;">Занимайте место на интенсиве,<br>забирайте подарок — и до встречи на эфирах!</h2>
+        <div class="features-list">
+          <span>📚 Участие во всех трёх уроках</span>
+          <span>⚡ Бонус за регистрацию</span>
+          <span>🎁 Бонусные материалы за просмотр</span>
+          <span>🔮 Участие в розыгрыше 10 колод</span>
+        </div>
+        <button class="btn-register" style="font-size: 1.2rem; padding: 16px 48px;" onclick="alert('✨ Вы успешно зарегистрированы! Проверьте Telegram-канал. До встречи 14 октября! ✨')">Зарегистрироваться</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © Таро-интенсив Анастасии Лыковой | Бесплатное обучение | Все права защищены
+  </footer>
+
+  <script>
+    (function() {
+      const animatedElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in');
+      if (animatedElements.length) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('appear');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: "0px 0px -20px 0px" });
+        animatedElements.forEach(el => observer.observe(el));
+      }
+      document.querySelectorAll('.hero-content, .hero-photo').forEach(el => {
+        if (el.classList.contains('fade-right') || el.classList.contains('fade-left')) {
+          const observerHero = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                observerHero.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.2 });
+          observerHero.observe(el);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
